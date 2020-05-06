@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Textulate || Remove Numbers From Text online .</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Textbrief helps writers, story tellers, authors, content creators etc summarize their articles online in 1-click.">
+    <meta name="keywords" content="Summary, Brief, Summarize my article">
+    <meta name="author" content="Botgence Developers">
+		<link rel="stylesheet" href="./static/css/font-awesome.css">
+		<link rel="stylesheet" href="./static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./static/css/style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+
+		function remove_numbers() {
+	var text= $('#remove_numbers_text').val();
+	  $.ajax({
+				  url: "/remove_numbers",
+				  type: "POST",
+				  data: {text:text}
+			  }).done(function(response) {
+				var html= "";
+				response =response.result;
+					 $.each(response,function(key,val){
+					 console.log(val);
+						html+="RESULT :"+val
+					});
+					html +="";
+					$(".remove_numbers").append(html);
+				});
+	};
+		</script>
+  </head>
+
+  <body>
+		<div class="topText py-2">
+			<p class="text-center mb-0 text-light">Remove Numbers From Text online IN 1-CLICK with Textulate.</p>
+		</div>
+		<!-- This navbar houses everything at the top - the links, logo and the button and also the sm screen nav button -->
+		<nav class="navbar navbar-expand-sm px-5 sticky-top topnav">
+			<a class="navbar-brand" href="home"><h3>TEXTULATE</h3></a>
+
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<i class="fa fa-bars fa-1x"></i>
+			</button>
+
+			<!-- Links -->
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav topnav-links">
+					<li class="nav-item py-2">
+						<a class="nav-link" href="remove_numbers">Remove Numbers</a>
+					</li>
+					<li class="nav-item py-2 ml-4">
+						<a class="nav-link" href="keyword">Extract Keywords</a>
+					</li>
+					<li class="nav-item py-2 ml-4">
+                <a class="nav-link" href="lowercase">Lowercase Converter</a>
+            </li>
+					<li class="nav-item py-2 ml-4">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+				<!-- <div class="support">
+					<a href="#" class="btn btn-lg support-btn ml-5">Support</a>
+				</div> -->
+			</div>
+		</nav>
+		<!-- .................... The navbar stops here -->
+		</nav>
+
+		<section class="boxes-and-buttons pt-5 container mt-3">
+			<div class="row justify-content-between mb-5">
+				<input class="col-md-3 p-0" type="file">
+				<button class="col-md-2 btn" id="remove_numbers_clicked" onclick="remove_numbers()">Summarize</button>
+				<button class="col-md-2 btn">Copy</button>
+				<button class="col-md-2 btn">Download</button>
+				</div>
+			</div>
+			<div class="row justify-content-between textarea-container">
+				<textarea class="col-md-5" id="remove_numbers_text" placeholder="Type your text here or use the 'choose file' button above and then click summarize." cols="40" rows="13"></textarea>
+				<textarea class="col-md-5 remove_numbers" placeholder="Your Summary..." cols="40" rows="13" readonly></textarea>
+			</div>
+		</section>
+
+
+		<script src="./static/js/popper.min.js"></script>
+		<script src="./static/js/jquery.js"></script>
+		<script src="./static/js/bootstrap.min.js"></script>
+		<!-- <script src="./assets/js/script.js"></script> -->
+  </body>
+</html>

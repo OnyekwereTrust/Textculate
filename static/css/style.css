@@ -1,0 +1,140 @@
+a {
+  color: #000c18;
+}
+
+
+/* The text before the navigation bar was styled here ========================================================= */
+.topText {
+	background-color: #000c18;
+}
+
+@media (max-width: 550px) {
+	.topText {
+		display: none !important;
+	}
+}
+/* ========================================================= */
+
+
+.btn {
+	background-color: #000c18;
+	color: white;
+}
+
+
+
+
+/*  Those boxes you in the homepage were styled here ============================================================= */
+textarea {
+	resize: none;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+@media (max-width: 767px) {
+	textarea {
+		max-width: 80% !important;
+		margin: 0 auto 20px auto;
+	}
+}
+/* =============================================================== */
+
+
+
+/* Every styling about the navbar was done here ======================================================= */
+ul.topnav-links {
+  margin-left: auto;
+}
+  
+nav.topnav {
+  box-shadow: 3px 3px 3px lightgrey;
+  background-color: white;
+}
+
+@media (max-width: 767px) {
+	.nav-item {
+		margin: 0 !important;
+		text-align: center;
+	}
+
+	.navbar {
+		padding: 10px !important;
+	}
+}
+/* ======================================================== */
+
+
+
+/* ======================================================== */
+@media (max-width: 767px) {
+	button {
+		width: fit-content !important;
+	}
+
+	.boxes-and-buttons > div:nth-child(1) {
+		padding: 0 20px !important;
+	}
+
+	input[type=file] {
+		margin: -25px 0 20px !important;
+	}
+}
+/* ============================================================= */
+
+
+
+/* The about section was styled here ============================================================= */
+section#about {
+	background: linear-gradient(rgba(2, 7, 26, 0.9), rgba(6, 15, 46, 0.9)), url("../images/bg.png");
+	background-size: cover;
+	margin: 50px 0 0;
+	padding: 100px 250px;
+}
+
+@media (max-width: 991px) {
+	section#about {
+		padding: 50px 20px !important;
+	}
+}
+/* ============================================================== */
+
+
+section#services {
+	background-color: rgb(245, 238, 238);
+}
+
+
+.fa-users, .fa-eye, .fa-pencil, .fa-book, .fa-tag {
+	border-radius: 30px;
+	background-color: rgb(160, 46, 46);
+	padding: 15px;
+	height: fit-content;
+}
+
+.first-carousel {
+	background: linear-gradient(rgba(6, 6, 7, 0.5), rgba(6, 6, 7, 0.5)), url("../images/student.png");
+}
+
+.second-carousel {
+	background: linear-gradient(rgba(6, 6, 7, 0.5), rgba(6, 6, 7, 0.5)), url("../images/reading.jpeg");
+}
+
+.third-carousel {
+	background: linear-gradient(rgba(6, 6, 7, 0.5), rgba(6, 6, 7, 0.5)), url("../images/writing.jpg");
+}
+
+.fourth-carousel {
+	background: linear-gradient(rgba(6, 6, 7, 0.5), rgba(6, 6, 7, 0.5)), url("../images/publisher.png");
+}
+
+.fifth-carousel {
+	background: linear-gradient(rgba(6, 6, 7, 0.5), rgba(6, 6, 7, 0.5)), url("../images/writing.png");
+}
+
+.carousel-item {
+	background-size: cover;
+	height: 100vh;
+	background-repeat: no-repeat;
+}
